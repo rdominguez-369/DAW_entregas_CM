@@ -125,8 +125,12 @@ public class Biblioteca
             int nuevoStock = stockMateriales.get(m);
             if (nuevoStock - 1 == 0) {
                 stockMateriales.remove(m);
-                //listaVehiculos.remove(v);
+                listaMateriales.remove(m);
+            } else{
 
+                stockMateriales.put(m, stockMateriales.get(m)-1);
+            }
+            return true;
         }
         return false;
     }
